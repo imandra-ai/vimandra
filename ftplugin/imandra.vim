@@ -8,7 +8,7 @@ endif
 let b:did_ftplugin=1
 
 function! ImandraMerlinInit ()
-  call merlin#Packages('imandra.prelude')
+  call merlin#Packages('imandra-base.prelude')
   call merlin#Flags('-open', 'Imandra_prelude')
   call merlin#Register()
   :MerlinFlags -reader imandra
