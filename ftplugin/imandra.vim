@@ -11,7 +11,7 @@ function! ImandraMerlinInit ()
   call merlin#Packages('imandra-prelude')
   call merlin#Flags('-open', 'Imandra_prelude')
   call merlin#Register()
-  :MerlinFlags -reader imandra
+  :MerlinFlags '-reader' 'imandra'
 endfunction
 
 function! imandra#MerlinHandle(buffer, lines) abort
@@ -30,9 +30,9 @@ endfunction
 if exists("g:merlin") && !exists("g:imandra_merlin_loaded")
   try
     let g:imandra_merlin_loaded = 1
-    echo "ftplugin for imandra: load merlin"
+    "echo "ftplugin for imandra: load merlin"
     call ImandraMerlinInit()
-    echo "ftplugin for imandra: merlin loaded"
+    "echo "ftplugin for imandra: merlin loaded"
     call ImandraAleInstall()
   catch
     echo "couldn't load merlin properly"
