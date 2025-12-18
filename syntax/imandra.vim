@@ -166,7 +166,7 @@ syn keyword  ocamlKeyword  try type
 syn keyword  ocamlKeyword  virtual when while with
 
 " imandra
-syn keyword  ocamlKeyword  theorem verify instance axiom lemma eval
+syn keyword  ocamlKeyword  theorem verify instance axiom lemma eval qcheck
 
 if exists("ocaml_revised")
   syn keyword  ocamlKeyword  do value
